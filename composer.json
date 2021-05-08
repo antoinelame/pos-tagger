@@ -1,0 +1,25 @@
+{
+    "name": "antoinelame/pos-tagger",
+    "description": "Part-of-speech tagging in PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antoine Lamé",
+            "email": "antoine.lame@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AntoineLame\\PosTagger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AntoineLame\\PosTaggerTests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
