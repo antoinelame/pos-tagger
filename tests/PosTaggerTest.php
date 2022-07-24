@@ -107,4 +107,15 @@ class PosTaggerTest extends TestCase
         $this->assertInstanceOf(Token::class, $token);
         $this->assertSame($isInterjection, $token->isInterjection());
     }
+
+    /** @test */
+    public function can_add_additional_dictionary()
+    {
+        $tagger = new PosTagger([
+            'selfie' => ['NN'],
+        ]);
+
+        $this->assertTrue($tagger->token('selfie')->isNoun());
+        $this->assertTrue($tagger->token('legacy')->isNoun()); // To check Lexicon is still used
+    }
 }

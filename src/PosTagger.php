@@ -4,7 +4,12 @@ namespace AntoineLame\PosTagger;
 
 class PosTagger
 {
-    protected array $dictionary = Lexicon::DICTIONARY;
+    protected array $dictionary;
+
+    public function __construct(array $additionalDictionary = [])
+    {
+        $this->dictionary = array_merge(Lexicon::DICTIONARY, $additionalDictionary);
+    }
 
     /**
      * Retrieve the tags for each word of a sentence.
