@@ -62,7 +62,7 @@ class PosTaggerTest extends TestCase
 
     /**
      * @test
-     * @dataProvider \AntoineLame\PosTaggerTests\DataProvider::vebs()
+     * @dataProvider \AntoineLame\PosTaggerTests\DataProvider::verbs()
      */
     public function it_detects_verbs(string $word, bool $isVerb)
     {
@@ -74,7 +74,7 @@ class PosTaggerTest extends TestCase
 
     /**
      * @test
-     * @dataProvider \AntoineLame\PosTaggerTests\DataProvider::ajectives()
+     * @dataProvider \AntoineLame\PosTaggerTests\DataProvider::adjectives()
      */
     public function it_detects_adjectives(string $word, bool $isAdjective)
     {

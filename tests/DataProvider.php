@@ -85,7 +85,7 @@ class DataProvider
         ];
     }
 
-    public static function vebs(): array
+    public static function verbs(): array
     {
         return [
             ['anticipate', static::IS_VERB],
@@ -111,7 +111,7 @@ class DataProvider
         ];
     }
 
-    public static function ajectives(): array
+    public static function adjectives(): array
     {
         return [
             ['accurate', static::IS_ADJECTIVE],
