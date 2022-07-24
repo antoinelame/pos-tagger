@@ -74,6 +74,18 @@ class PosTaggerTest extends TestCase
 
     /**
      * @test
+     * @dataProvider \AntoineLame\PosTaggerTests\DataProvider::baseFormVerbs()
+     */
+    public function it_detects_base_form_verbs(string $word, bool $isVerb)
+    {
+        $token = $this->tagger->token($word);
+
+        $this->assertInstanceOf(Token::class, $token);
+        $this->assertSame($isVerb, $token->isBaseFormVerb());
+    }
+
+    /**
+     * @test
      * @dataProvider \AntoineLame\PosTaggerTests\DataProvider::adjectives()
      */
     public function it_detects_adjectives(string $word, bool $isAdjective)

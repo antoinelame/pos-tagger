@@ -19,6 +19,8 @@ class DataProvider
     // Verbs
     const IS_VERB = true;
     const IS_NOT_VERB = false;
+    const IS_BASE_FORM_VERB = true;
+    const IS_NOT_BASE_FORM_VERB = false;
 
     // Adjectives
     const IS_ADJECTIVE = true;
@@ -108,6 +110,19 @@ class DataProvider
             ['slept', static::IS_VERB],
             ['speakers', static::IS_NOT_VERB],
             ['tissue', static::IS_NOT_VERB],
+        ];
+    }
+
+    public static function baseFormVerbs(): array
+    {
+        return [
+            ['assign', static::IS_BASE_FORM_VERB],
+            ['question', static::IS_BASE_FORM_VERB],
+            ['questions', static::IS_NOT_BASE_FORM_VERB],
+            ['questioned', static::IS_NOT_BASE_FORM_VERB],
+            ['appreciated', static::IS_NOT_BASE_FORM_VERB],
+            ['focusing', static::IS_NOT_BASE_FORM_VERB],
+            ['speaks', static::IS_NOT_BASE_FORM_VERB],
         ];
     }
 

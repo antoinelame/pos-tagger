@@ -44,6 +44,11 @@ class Token
         return ! empty(array_intersect($verbTags, $this->tags));
     }
 
+    public function isBaseFormVerb(): bool
+    {
+        return ! empty(array_intersect(['VB'], $this->tags));
+    }
+
     public function isAdjective(): bool
     {
         $adjectiveTags = ['JJ', 'JJR', 'JJS'];
